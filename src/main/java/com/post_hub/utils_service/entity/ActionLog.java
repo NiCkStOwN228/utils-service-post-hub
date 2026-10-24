@@ -1,4 +1,4 @@
-package com.post_hub.utils_service.model.entity;
+package com.post_hub.utils_service.entity;
 
 import com.post_hub.utils_service.model.enums.ActionType;
 import com.post_hub.utils_service.model.enums.PostHubService;
