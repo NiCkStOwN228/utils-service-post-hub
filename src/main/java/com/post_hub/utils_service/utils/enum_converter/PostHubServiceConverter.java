@@ -6,7 +6,6 @@ import jakarta.persistence.Converter;
 
 @Converter
 public class PostHubServiceConverter implements AttributeConverter<PostHubService, String> {
-
     @Override
     public String convertToDatabaseColumn(PostHubService attribute) {
         return attribute.getValue();

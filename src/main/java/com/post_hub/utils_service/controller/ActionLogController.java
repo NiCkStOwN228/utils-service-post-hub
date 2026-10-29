@@ -37,11 +37,11 @@ public class ActionLogController {
     public ResponseEntity<UtilsResponse<PaginationResponse<ActionLogDTO>>> findAllActionLogs(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "10") int limit) {
-                log.trace(ApiLogMessage.NAME_OF_CURRENT_METHOD.getValue(), ApiUtils.getMethodName());
+        log.trace(ApiLogMessage.NAME_OF_CURRENT_METHOD.getValue(), ApiUtils.getMethodName());
 
-                Pageable pageable = PageRequest.of(page, limit);
-                UtilsResponse<PaginationResponse<ActionLogDTO>> response = service.findAllActionLogs(pageable);
-                return ResponseEntity.ok(response);
+        Pageable pageable = PageRequest.of(page, limit);
+        UtilsResponse<PaginationResponse<ActionLogDTO>> response = service.findAllActionLogs(pageable);
+        return ResponseEntity.ok(response);
     }
 
     @PutMapping("${end.points.markAsRead}")
@@ -51,5 +51,4 @@ public class ActionLogController {
 
         return ResponseEntity.ok(service.setIsReadEqualsTrue(request));
     }
-
 }

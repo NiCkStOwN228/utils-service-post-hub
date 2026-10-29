@@ -37,12 +37,12 @@ public class ActionLog {
     @Convert(converter = PostHubServiceConverter.class)
     private PostHubService service;
 
-    @Column(name = "created_at",  nullable = false, updatable = false)
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "message",  nullable = false, updatable = false)
+    @Column(name = "message", nullable = false, updatable = false)
     private String message;
 
-    @Column(name = "is_read",  nullable = false, updatable = false)
+    @Column(name = "is_read", nullable = false, updatable = false)
     private Boolean isRead;
 }
