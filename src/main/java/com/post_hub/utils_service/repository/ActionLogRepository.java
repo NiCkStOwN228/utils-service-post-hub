@@ -16,6 +16,7 @@ public interface ActionLogRepository extends JpaRepository<ActionLog, Integer>, 
     Optional<ActionLog> findByIdAndUserId(Integer logId, Integer userId);
 
     @Modifying
-    @Query(value = "UPDATE ActionLog as al SET al.isRead = true WHERE al.id IN ?1")
+    @Query(value = "UPDATE ActionLog as al SET al.isRead = true WHERE al.id IN ?1 ")
     Integer setIsReadEqualsTrue(List<Integer> ids);
+
 }

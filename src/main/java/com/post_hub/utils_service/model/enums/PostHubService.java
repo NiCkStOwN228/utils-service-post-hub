@@ -10,7 +10,7 @@ import java.util.Objects;
 @AllArgsConstructor
 public enum PostHubService {
     IAM_SERVICE("iam-service"),
-    UNDEFINED_SERIVCE("Undefined-service");
+    UNDEFINED_SERVICE("Undefined-service");
 
     private final String value;
 
@@ -18,6 +18,6 @@ public enum PostHubService {
         return Arrays.stream(PostHubService.values())
                 .filter(v -> Objects.equals(v.value, searchValue))
                 .findFirst()
-                .orElse(PostHubService.UNDEFINED_SERIVCE);
+                .orElse(PostHubService.UNDEFINED_SERVICE);
     }
 }
